@@ -51,9 +51,3 @@ sh-weasyprint:
 		--tty \
 		--entrypoint /bin/ash \
 		greedybro/weasyprint:$(WEASYPRINT_VERSION)
-
-## Publish weasyprint image(s)
-push-weasyprint:
-	$(call docker_login)
-	docker push \
-		greedybro/weasyprint:$(WEASYPRINT_VERSION)
